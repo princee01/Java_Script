@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Chai aur javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    // setInterval(() => {
+    //     console.log("prince",Date.now());
+        
+    // }, 1000);//it will print prince after every second
+
+    //1.stop the exection of code.
+    const saydate=function(str){
+        console.log(str,Date.now());
+    }
+
+    const intervalid=setInterval(saydate,1000,"hi")
+    
+    document.querySelector('#stop').addEventListener("click",function(e){
+        clearInterval(intervalid);
+    })
+
+    //2.
+    
+    
+
+</script>
+
+</html>
