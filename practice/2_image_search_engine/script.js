@@ -1,4 +1,4 @@
-const accesskey="AZy21-r8Jn76U3G-wW_OFG6jf_y4KnwgBuTW7yIRgXU"
+const accesskey="write your own accesskey(create new using unsplash.com"
 
 const searchForm = document.getElementById("search-form")
 const searchBox = document.getElementById("search-box")
