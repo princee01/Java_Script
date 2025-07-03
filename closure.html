@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <botton id="green">green</botton>
+    <script>
+        //1.lexical scoping
+        //all the variables of outer function are accessed by inner function - vice versa not possible
+        function init(){
+            let name="prince";
+            function displayname(){
+                console.log(name);
+                
+            }
+            displayname();
+        }
+        init();
+
+        // function outer(){                  not acceptable
+        //     let username='hitesh';
+        // }
+        // console.log(username);
+
+    </script>
+    <script>
+        //2.closure
+            //*in closure we reture entire function and not only function its entire lexical scope is returned
+            //------practicle implementation-------
+            
+            //---------background color change on button click
+            // document.getElementById("orange").onclick=function(){
+            //     document.body.style.backgroundColor="orange";
+            // }
+            // document.getElementById("green").onclick = function () {
+            //         document.body.style.backgroundColor = "green";
+            //     }
+
+            //-----------------------------------------------------
+            //wrong approach
+            //  function clickhandler(color){
+            //     
+            //          document.body.style.backgroundColor=`${color}`;
+            //     
+            // }
+            //document.getElementById('orange').onclick=clickhandler;//here weve passed only reference of function
+            
+            //using closure------------------------------------------
+            function clickhandler(color) {
+
+                    return function(){
+                        document.body.style.backgroundColor=`${color}`
+                    }
+                }
+            document.getElementById('orange').onclick =clickhandler("orange")
+            document.getElementById('green').onclick = clickhandler("green")
+    </script>
+</body>
+</html>
