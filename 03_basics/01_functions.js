@@ -45,7 +45,7 @@ const temp = loginusermessage();
 console.log(temp);
 //________________________________________________________________________________________________________________
 
-//rest operator(...):
+//rest operator(...): allows a function to accept an indefinite number of argument and gather them into single array
 // function calculatecartprice(...num1) {
 //     return num1;
 // }
