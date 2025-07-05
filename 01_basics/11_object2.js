@@ -76,9 +76,10 @@ const course = {
     courseInstructor:"hitesh"
 }
 //course.courseInstructor//avoid this
-//## destructure of object
+//## destructure of object-->it is a way to extract values from object and assign them into variables..
 const { courseInstructor: instructor } = course;
 console.log(instructor);//hitesh
+
 
 
 
