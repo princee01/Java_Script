@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <p>Rock Paper Scissor</p>
+      
+    <button onclick="
+      let randomnumber=Math.floor((Math.random()*10+1));
+      //console.log(randomnumber);
+
+      let computer_turn=''
+      if(randomnumber>=1 && randomnumber<=3){
+           computer_turn='rock';
+      }else if(randomnumber>3 && randomnumber<=6){
+        computer_turn='paper';
+      }else if(randomnumber>6 && randomnumber<=10){
+        computer_turn='Scissor';
+      }
+
+      //console.log(computer_turn);
+      let result='';
+      if(computer_turn==='rock'){
+        result='you win';
+      }else if(computer_turn==='paper'){
+        result='you lose';
+      }else if(computer_turn==='scissor'){
+        result='you win';
+      }
+      alert(`you picked rock and computer picked ${computer_turn}.${result}`)
+      
+    ">Rock</button>
+    <button onclick="
+        
+      let randomnumber=Math.floor((Math.random()*10+1));
+      //console.log(randomnumber);
+
+      let computer_turn=''
+      if(randomnumber>=1 && randomnumber<=3){
+           computer_turn='rock';
+      }else if(randomnumber>3 && randomnumber<=6){
+        computer_turn='paper';
+      }else if(randomnumber>6 && randomnumber<=10){
+        computer_turn='Scissor';
+      }
+
+      //console.log(computer_turn);
+      let result='';
+      if(computer_turn==='paper'){
+        result='tie';
+      }else if(computer_turn==='rock'){
+        result='you win';
+      }else if(computer_turn==='Scissor'){
+        result='you lose';
+      }
+      alert(`you picked paper and computer picked ${computer_turn}.${result}`)
+      
+    ">Paper</button>
+    <button onclick="
+    let randomnumber=Math.floor((Math.random()*10+1));
+      //console.log(randomnumber);
+
+      let computer_turn=''
+      if(randomnumber>=1 && randomnumber<=3){
+           computer_turn='rock';
+      }else if(randomnumber>3 && randomnumber<=6){
+        computer_turn='paper';
+      }else if(randomnumber>6 && randomnumber<=10){
+        computer_turn='Scissor';
+      }
+
+      //console.log(computer_turn);
+      let result='';
+      if(computer_turn==='Scissor'){
+        result='tie';
+      }else if(computer_turn==='rock'){
+        result='you lose';
+      }else if(computer_turn==='paper'){
+        result='you win';
+      }
+      alert(`you picked Scissor and computer picked ${computer_turn}.${result}`)
+      
+    
+    ">Scissor</button>
+</body>
+</html>
