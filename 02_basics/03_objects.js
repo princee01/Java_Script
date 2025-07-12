@@ -65,3 +65,14 @@ console.log(Jsuser.greeting2());//hello JS user, prince
 
 //question:
 // create a symbol and use it in object ---->solved above 
+
+//-----------------------------------------------------------------------------------------------------------
+//object to json and json to object
+const product={
+    name:'prince',
+    roll:234
+};
+const jsonstring= JSON.stringify(product2);
+console.log(jsonstring);
+console.log(JSON.parse(jsonstring));
+    
