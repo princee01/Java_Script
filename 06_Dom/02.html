@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    //1.select parent element and check which values are there
+    const parent=document.querySelector('.parent')
+    console.log(parent);
+    //console.log(parent.children);//op is array collection
+    //console.log(parent.children[2].innerHTML);//wednesday
+
+    for (let i = 0; i < parent.children.length; i++) {
+        //console.log(parent.children[i].innerHTML);  // print monday...thursday
+    }
+    parent.children[0].style.color="orange";// color of monday changed to orange
+    //console.log(parent.firstElementChild);
+    //console.log(parent.lastElementChild);
+
+    //lets move from child to parent
+    const day1=document.querySelector('.day')
+    // console.log(day1.innerHTML);//monday
+    // console.log(day1.parentElement)
+    // console.log(day1.nextElementSibling.innerHTML)//tuesday
+
+    //console.log("nodes: ", parent.childNodes);
+    
+</script>
+</html>

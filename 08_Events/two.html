@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //1.
+    // setTimeout(function(){
+    //     console.log("prince")
+    // },2000)//it will print prince in console after 2 sec but only once
+    //or
+    // const sayhello=function(){
+    //     console.log("prince")
+    // }
+    // setTimeout(sayhello,2000)//here we give reference to function
+
+    //2.
+    //document.querySelector('h1').innerHTML="best js series";
+    //i want this change to happen after 2 second
+    const changetext=function(){
+        document.querySelector('h1').innerHTML = "best js series"
+    }
+    //setTimeout(changetext,2000);
+
+    //3.
+    //how to stop the change before it gonna be happen
+    const changeme= setTimeout(changetext,2000)
+    // clearTimeout(changeme);//not a good practice
+
+    //cleartimeout on event
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeme)
+        console.log("stopped");
+    })
+
+
+
+</script>
+</html>

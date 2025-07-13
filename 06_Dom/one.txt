@@ -1,0 +1,47 @@
+The HTML DOM (Document Object Model) is a
+programming interface that represents the structure
+of a web page in a way that programming languages 
+like JavaScript can understand and manipulate.
+
+How the DOM Works?
+The DOM connects your webpage to JavaScript, allowing you to:
+
+Access elements (like finding an <h1> tag).
+Modify content (like changing the text of a <p> tag).
+React to events (like a button click).
+Create or remove elements dynamically.
+
+
+Commonly Used DOM Methods:
+Methods                           Description
+
+getElementById(id)                Selects an element by its ID.
+
+getElementsByClassName(class)     Selects all elements with a given class.
+
+querySelector(selector)           Selects the first matching element.
+
+querySelectorAll(selector)        Selects all matching elements.
+
+createElement(tag)                Creates a new HTML element.
+
+appendChild(node)                 Adds a child node to an element.
+
+remove()                          Removes an element from the DOM.
+
+addEventListener(event, fn)       Attaches an event handler to an element.
+
+
+note: go through w3 schools for more detail
+
+
+examples:
+1.const element=document.querySelector('h1');//it will select first h1
+2.element.style.color="red"//it change color of h1
+3.document.querySelectorAll("li")//it will select all li
+4.const a=document.querySelectorAll("li")//stored all in a variable it converted into collection
+5.Array.from(a);//coverted into array list
+6.const convertedarr=Array.from(a);//stored into var
+7.convertedarr.forEach(function(li){// using foreach changed color of all li items.
+    li.style.color="red";
+})

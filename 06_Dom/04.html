@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code </title>
+</head>
+<body style="background-color: #212121; color:white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    //1.adding more elements in list
+    function addLanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python");
+    addLanguage("typescript");
+    //if were using above way then entire array will be traverse again and again
+
+    //another optimized way
+    function addOptiLanguage(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("c++");
+
+    //2.Edit
+    const secondlang=document.querySelector("li:nth-child(2)")
+    console.log(secondlang);//python
+    //secondlang.innerHTML="MOJO";
+    const newli=document.createElement('li')
+    newli.textContent="Mojo";
+    secondlang.replaceWith(newli)//python replaced by mojo
+
+    //edit
+    const firstlang=document.querySelector("li:first-child");
+    firstlang.outerHTML='<li>Typescript</li>'
+
+    //3.remove
+    const lastlang=document.querySelector("li:last-child");
+    lastlang.remove()
+</script>
+</html>

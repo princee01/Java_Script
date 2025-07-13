@@ -1,0 +1,50 @@
+? why we need module.
+
+--> if we have 3 js files cart.js,amazon.js,order.js
+and we want to use a variable named (const cart[]) which is present in cart.js
+then we need to load cart.js file using script tag in amazon.js
+
+by doing so cant declare another variable in amazon.js by same name as (const cart[]).
+
+therefore we use concept of module..
+
+-----------------------------------------------------------------------------------------------
+#create a module.
+
+1.create a file
+2.dont load the file with <script>
+any variable we create inside file,
+will be contained inside the file.
+-----------------------------------------------------------------------------------------------
+what we have to do?
+ 
+-->if we using cart variable in amazon.js file without loading cart.js in amazon.html file
+ it will give error that cart is not defined.
+
+--------
+| cart |
+-------
+cart.js
+ 
+ if we do not load cart.js in main file then cart var doesnot exist anymore
+ we cant access cart from outside..
+
+ -----------------------------------------------------------------------------------------------
+ Get a variable from out of a file...
+ 1.add type="module" attribute.
+ 2.Export.
+ 3.Import.
+
+ --->open amazon.html
+ --->add type="module" attribute in amazon.js script tag
+ --->goto cart.js and infront of var write export so that it can be used outside
+ --->goto amazon.js and import{cart} from '../data/cart.js'; 
+
+this attribute let this file to get variable out of other file.
+.. represents goto the outside of current folder
+
+note:: module only work when file is oped with live server
+----------------------------------------------------------------------------------------------------------------
+#benifits of module:
+1.avaoid naming conflicts.
+

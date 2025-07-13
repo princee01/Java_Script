@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; ">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    <script>
+        // document.getElementById('owl').onclick=function(){
+        //     alert('owl');
+        // } old approach
+
+        // document.getElementById('owl').addEventListener('click',function(){
+        //     alert('owl clicked');
+        // })
+        
+        // document.getElementById('owl').addEventListener('click',function(e){
+        //     console.log(e); 
+        // },false)
+
+        //what to learn
+        //type, timestamp, defaultPrevented
+        //target, toElement, srcElement, currentTarget
+        //clientX, clientY, screenX, screenY
+        //altkey, ctrlkey, shiftkey, keycode
+
+        //event propogation-true/false
+
+        //----same code but targeting diff ids
+        // document.getElementById('images').addEventListener('click', function (e) {
+        //     console.log("clicked inside ul");
+        // }, false)
+
+        // document.getElementById('owl').addEventListener('click', function (e) {
+        //     console.log("owl clicked");
+        //     //e.stopPropagation()
+        // }, false)    
+    
+        //note: if we write false in both code which is targeting images then -bubbling occur means first will print owl and then ul
+        //but if we write true in first code -caputuring occur- means top to btm -first ul print then owl
+        // if we use -e.stopPropogation() then only "owl clicked " will print bubbling do not happen it will do not go above
+
+        // document.getElementById('google').addEventListener
+        // ('click',function(e){
+        //     console.log("google clicked");
+        //     e.preventDefault()
+        // },false)//this will prevent default working as when we click on google website do not open only text will print
+
+
+        //---------------------------------------------------------------------------------------------------------------------------------
+        //ques: target===>on click on li images will vanish
+
+        document.querySelector('#images').addEventListener(
+            'click',function(e){
+                //console.log(e.target.parentNode);
+                console.log(e.target.tagName);
+                
+                if(e.target.tagName==='IMG'){
+                    let removeIt = e.target.parentNode
+                    removeIt.remove();
+                }
+            })
+    </script>
+</body>
+</html>
