@@ -1,11 +1,11 @@
-function sayname() {
-    console.log("p");
-    console.log("r");
-    console.log("i");
-    console.log("n");
-    console.log("c");
-    console.log("e");
-}
+// function sayname() {
+//     console.log("p");
+//     console.log("r");
+//     console.log("i");
+//     console.log("n");
+//     console.log("c");
+//     console.log("e");
+// }
 //sayname()//here function call occure;
 
 //__________________________________________add two numbers______________________________________
@@ -26,7 +26,7 @@ function add2num(num1, num2) {
 // add2num(5, "6");//56
 // add2num(5, null);//5
 const result = add2num(15, 15);
-console.log("result: ", result);//30
+//console.log("result: ", result);//30
 
 
 function loginusermessage(username) {
@@ -41,7 +41,7 @@ function loginusermessage(username) {
     }
     return `${username} just loggedin`
 }
-const temp = loginusermessage();
+const temp = loginusermessage("prince");
 console.log(temp);
 //________________________________________________________________________________________________________________
 
@@ -78,7 +78,7 @@ const arr = [200, 400, 100, 600];
 function returnsecondvalue(getarr){
     return getarr[1];
 }
-console.log(returnsecondvalue(arr));//400
+//console.log(returnsecondvalue(arr));//400
 
 //
 
