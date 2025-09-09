@@ -2,7 +2,6 @@ const input=document.querySelector("input")
 const buttons = document.querySelectorAll("button")
 
 const arr = Array.from(buttons)
-console.log(arr);
 
 
 arr.forEach(button => {
